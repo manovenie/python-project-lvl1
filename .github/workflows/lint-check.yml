@@ -1,0 +1,13 @@
+name: Linter check
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run strict flake8 linter
+        run: |
+          make lint
