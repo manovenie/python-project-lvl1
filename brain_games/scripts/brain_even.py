@@ -2,8 +2,8 @@
 
 from brain_games.cli import welcome_user
 from brain_games.scripts.brain_games import greet
-import random
 import prompt
+import random
 
 
 def brain_even_welcome_msg():
@@ -46,11 +46,10 @@ def main():
 				break
 		else:
 			# check if continue needed with setting counter to 0
-			counter_correct_answers = 0
 			print("'{}' is wrong answer ;(. "
 					"Correct answer was '{}'\nLet's try again, {}!"
 					.format(user_answer, correct_answer, user_name))
-			continue
+			break
 
 
 if __name__ == '__main__':
