@@ -4,9 +4,8 @@ from brain_games.cli import welcome_user
 from brain_games.scripts.brain_games import greet
 from brain_games.scripts.brain_games import print_game_instruction
 from brain_games.scripts.brain_games import generate_int
-from brain_games.scripts.brain_games import print_question_to_solve
 import prompt
-import random
+
 
 def find_true_answer(generated_int):
 	generated_int = generated_int % 2 == 0

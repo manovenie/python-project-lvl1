@@ -4,7 +4,6 @@ from brain_games.cli import welcome_user
 from brain_games.scripts.brain_games import greet
 from brain_games.scripts.brain_games import print_game_instruction
 from brain_games.scripts.brain_games import generate_int
-from brain_games.scripts.brain_games import print_question_to_solve
 import prompt
 import random
 
@@ -29,7 +28,7 @@ def main():
 		random_int2 = generate_int()
 		signs = ['-', '+', '*']
 		sign1 = random.choice(signs)
-		print('Question: {} {} {}'.format(random_int1, random_int2, sign1))
+		print('Question: {} {} {}'.format(random_int1, sign1, random_int2))
 		correct_answer = find_true_answer(random_int1, random_int2, sign1)
 		user_answer = prompt.integer('Your answer: ')
 		if correct_answer == user_answer:

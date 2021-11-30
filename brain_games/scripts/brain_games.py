@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from brain_games.cli import welcome_user
+import random
 
 
 def greet():
@@ -14,8 +15,9 @@ def print_game_instruction(game):
     elif game == 'brain-calc':
         print('What is the result of the expression?')
 
+
 def generate_int():
-	return random.randint(1, 100)
+    return random.randint(1, 100)
 
 
 def main():
