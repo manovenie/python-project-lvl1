@@ -14,6 +14,8 @@ def print_game_instruction(game):
         print('Answer "yes" if the number is even, otherwise answer "no".')
     elif game == 'brain-calc':
         print('What is the result of the expression?')
+    elif game == 'brain-gcd':
+        print('Find the greatest common divisor of given numbers.')
 
 
 def generate_int():
