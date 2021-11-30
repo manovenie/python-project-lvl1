@@ -8,25 +8,30 @@ from brain_games.scripts.brain_games import print_question_to_solve
 import prompt
 import random
 
-def find_true_answer(generated_int):
-	generated_int = generated_int % 2 == 0
-	if generated_int is True:
-		return 'yes'
-	else:
-		return 'no'
+
+def find_true_answer(int1, int2, sign):
+	if sign == '*':
+		return int(int1 * int2)
+	elif sign == '+':
+		return int(int1 + int2)
+	elif sign == '-':
+		return int(int1 - int2)
 
 
 def main():
-	game_name = 'brain-even'
+	game_name = 'brain-calc'
 	greet()
 	user_name = welcome_user()
 	print_game_instruction(game_name)
 	counter_correct_answers = 0
 	while True:
-		random_int = generate_int()
-		print("Question: {}".format(random_int))
-		correct_answer = find_true_answer(random_int)
-		user_answer = prompt.string('Your answer: ')
+		random_int1 = generate_int()
+		random_int2 = generate_int()
+		signs = ['-', '+', '*']
+		sign1 = random.choice(signs)
+		print('Question: {} {} {}'.format(random_int1, random_int2, sign1))
+		correct_answer = find_true_answer(random_int1, random_int2, sign1)
+		user_answer = prompt.integer('Your answer: ')
 		if correct_answer == user_answer:
 			counter_correct_answers += 1
 			if counter_correct_answers < 3:
