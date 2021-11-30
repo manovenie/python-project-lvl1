@@ -16,6 +16,8 @@ def print_game_instruction(game):
         print('What is the result of the expression?')
     elif game == 'brain-gcd':
         print('Find the greatest common divisor of given numbers.')
+    elif game == 'brain-progression':
+        print('What number is missing in the progression?')
 
 
 def generate_int():
