@@ -40,9 +40,9 @@ def main():
                 print("Congratulations, {}!".format(user_name))
                 break
         else:
-            print("'{}' is wrong answer ;(. "
-            "Correct answer was '{}'\nLet's try again, {}!"
-            .format(user_answer, correct_answer, user_name))
+            print("'{}' is wrong answer ;(. ".format(user_answer), end='')
+            print("Correct answer was '{}'".format(correct_answer))
+            print("Let's try again, {}!".format(user_name))
             break
 
 
