@@ -18,6 +18,8 @@ def print_game_instruction(game):
         print('Find the greatest common divisor of given numbers.')
     elif game == 'brain-progression':
         print('What number is missing in the progression?')
+    elif game == 'brain-prime':
+        print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
 
 def generate_int():
