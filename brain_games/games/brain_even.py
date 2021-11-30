@@ -8,38 +8,38 @@ import prompt
 
 
 def find_true_answer(generated_int):
-	generated_int = generated_int % 2 == 0
-	if generated_int is True:
-		return 'yes'
-	else:
-		return 'no'
+    generated_int = generated_int % 2 == 0
+    if generated_int is True:
+        return 'yes'
+    else:
+        return 'no'
 
 
 def main():
-	game_name = 'brain-even'
-	greet()
-	user_name = welcome_user()
-	print_game_instruction(game_name)
-	counter_correct_answers = 0
-	while True:
-		random_int = generate_int()
-		print("Question: {}".format(random_int))
-		correct_answer = find_true_answer(random_int)
-		user_answer = prompt.string('Your answer: ')
-		if correct_answer == user_answer:
-			counter_correct_answers += 1
-			if counter_correct_answers < 3:
-				print('Correct!')
-				continue
-			else:
-				print("Congratulations, {}!".format(user_name))
-				break
-		else:
-			print("'{}' is wrong answer ;(. "
-					"Correct answer was '{}'\nLet's try again, {}!"
-					.format(user_answer, correct_answer, user_name))
-			break
+    game_name = 'brain-even'
+    greet()
+    user_name = welcome_user()
+    print_game_instruction(game_name)
+    counter_correct_answers = 0
+    while True:
+        random_int = generate_int()
+        print("Question: {}".format(random_int))
+        correct_answer = find_true_answer(random_int)
+        user_answer = prompt.string('Your answer: ')
+        if correct_answer == user_answer:
+            counter_correct_answers += 1
+            if counter_correct_answers < 3:
+                print('Correct!')
+                continue
+            else:
+                print("Congratulations, {}!".format(user_name))
+                break
+        else:
+            print("'{}' is wrong answer ;(. "
+            "Correct answer was '{}'\nLet's try again, {}!"
+            .format(user_answer, correct_answer, user_name))
+            break
 
 
 if __name__ == '__main__':
-	main()
+    main()
