@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "The first of four educating projects of the 'Profession: Python Developer' course on Hexlet.io"
 authors = ["Ilya Dutlov <id@dutlov.ru>"]
+repository = "https://github.com/dutlov/python-project-lvl1"
 packages = [
   { include = "brain_games" },
 ]
