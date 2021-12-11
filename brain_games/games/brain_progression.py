@@ -3,8 +3,16 @@
 from brain_games.cli import welcome_user
 from brain_games.scripts.brain_games import greet
 from brain_games.scripts.brain_games import print_game_instruction
+from brain_games.scripts.brain_games import COUNT_WINS_NEEDED
 import prompt
 import random
+
+PROGRESSION_LEN_MIN = 5
+PROGRESSION_LEN_MAX = 10
+START_MIN = 1
+START_MAX = 50
+STEP_MIN = 2
+STEP_MAX = 10
 
 
 def find_true_answer(int1, int2):
@@ -17,10 +25,10 @@ def find_true_answer(int1, int2):
 
 
 def generate_progression():
-    random_length = random.randint(5, 10)
-    random_start = random.randint(1, 50)
+    random_length = random.randint(PROGRESSION_LEN_MIN, PROGRESSION_LEN_MAX)
+    random_start = random.randint(START_MIN, START_MAX)
     nbr_to_add = random_start
-    random_step = random.randint(2, 10)
+    random_step = random.randint(STEP_MIN, STEP_MAX)
     progression = []
     for counter in range(random_length):
         nbr_to_add += random_step
@@ -52,7 +60,7 @@ def main():
         user_answer = prompt.integer('Your answer: ')
         if correct_answer == user_answer:
             counter_correct_answers += 1
-            if counter_correct_answers < 3:
+            if counter_correct_answers < COUNT_WINS_NEEDED:
                 print('Correct!')
                 continue
             else:

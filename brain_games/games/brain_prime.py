@@ -4,6 +4,7 @@ from brain_games.cli import welcome_user
 from brain_games.scripts.brain_games import greet
 from brain_games.scripts.brain_games import print_game_instruction
 from brain_games.scripts.brain_games import generate_int
+from brain_games.scripts.brain_games import COUNT_WINS_NEEDED
 import prompt
 
 
@@ -31,7 +32,7 @@ def main():
         user_answer = prompt.string('Your answer: ')
         if correct_answer == user_answer:
             counter_correct_answers += 1
-            if counter_correct_answers < 3:
+            if counter_correct_answers < COUNT_WINS_NEEDED:
                 print('Correct!')
                 continue
             else:

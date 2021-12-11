@@ -3,6 +3,10 @@
 from brain_games.cli import welcome_user
 import random
 
+MIN_RANDOM_INT = 1
+MAX_RANDOM_INT = 100
+COUNT_WINS_NEEDED = 3
+
 
 def greet():
     """print welcome message."""
@@ -23,7 +27,7 @@ def print_game_instruction(game):
 
 
 def generate_int():
-    return random.randint(1, 100)
+    return random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
 
 
 def main():
