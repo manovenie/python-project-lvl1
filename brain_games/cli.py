@@ -7,9 +7,6 @@ def get_user_name():
     return prompt.string('May I have your name? ')
 
 
-def get_user_answer(game_name):
+def get_user_answer():
     """Prompt user for answer."""
-    if game_name == 'brain-even' or game_name == 'brain-prime':
-        return prompt.string('Your answer: ')
-    else:
-        return prompt.integer('Your answer: ')
+    return prompt.string('Your answer: ')
