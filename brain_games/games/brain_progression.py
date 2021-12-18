@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
-from brain_games.cli import welcome_user
-from brain_games.scripts.brain_games import greet
-from brain_games.scripts.brain_games import print_game_instruction
+from brain_games.cli import get_user_answer
+from brain_games.scripts.brain_games import welcome_user
 from brain_games.scripts.brain_games import COUNT_WINS_NEEDED
+from brain_games.scripts.brain_games import print_lose_message
 import prompt
 import random
 
+GAME_NAME = 'brain-progression'
 PROGRESSION_LEN_MIN = 5
 PROGRESSION_LEN_MAX = 10
 START_MIN = 1
@@ -46,10 +47,7 @@ def show_incomplete_progression(progression, hidden_nbr):
 
 
 def main():
-    game_name = 'brain-progression'
-    greet()
-    user_name = welcome_user()
-    print_game_instruction(game_name)
+    user_name = welcome_user(GAME_NAME)
     counter_correct_answers = 0
     while True:
         random_progression = generate_progression()
@@ -57,7 +55,7 @@ def main():
         print('Question: ', end='')
         show_incomplete_progression(random_progression, nbr_to_be_missed)
         correct_answer = nbr_to_be_missed
-        user_answer = prompt.integer('Your answer: ')
+        user_answer = get_user_answer(GAME_NAME)
         if correct_answer == user_answer:
             counter_correct_answers += 1
             if counter_correct_answers < COUNT_WINS_NEEDED:
@@ -67,10 +65,7 @@ def main():
                 print("Congratulations, {}!".format(user_name))
                 break
         else:
-            print("'{}' is wrong answer ;(. ".format(user_answer), end='')
-            print("Correct answer was '{}'".format(correct_answer))
-            print("Let's try again, {}!".format(user_name))
-            break
+            print_lose_message()
 
 
 if __name__ == '__main__':
