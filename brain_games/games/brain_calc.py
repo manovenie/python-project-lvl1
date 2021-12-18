@@ -18,12 +18,12 @@ operations = {
 
 
 def find_true_answer(int1, int2, operation):
-    return str(operations[operations](int1, int2))
+    return str(operations[operation](int1, int2))
 
 
 def print_question_return_answer():
     random_int1, random_int2 = generate_int(), generate_int()
-    operation = choice(list(operations.keys())
+    operation = choice(list(operations.keys()))
     print('Question: {} {} {}'.format(random_int1, operations, random_int2))
     correct_answer = find_true_answer(random_int1, random_int2, operation)
     return correct_answer
