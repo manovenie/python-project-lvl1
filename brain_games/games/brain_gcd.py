@@ -14,7 +14,7 @@ def find_true_answer(int1, int2):
     for counter in range(biggest_divider, smallest_nbr + 1):
         if int1 % counter == 0 and int2 % counter == 0:
             biggest_divider = counter
-    return biggest_divider
+    return str(biggest_divider)
 
 
 def print_question_return_answer():
