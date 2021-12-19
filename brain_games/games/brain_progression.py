@@ -15,15 +15,6 @@ STEP_MIN = 2
 STEP_MAX = 10
 
 
-def find_true_answer(int1, int2):
-    biggest_divider = 1
-    smallest_nbr = min(int1, int2)
-    for counter in range(biggest_divider, smallest_nbr + 1):
-        if int1 % counter == 0 and int2 % counter == 0:
-            biggest_divider = counter
-    return str(biggest_divider)
-
-
 def generate_progression():
     random_length = random.randint(PROGRESSION_LEN_MIN, PROGRESSION_LEN_MAX)
     random_start = random.randint(START_MIN, START_MAX)
@@ -51,7 +42,7 @@ def print_question_return_answer():
     print('Question: ', end='')
     show_incomplete_progression(random_progression, nbr_to_be_missed)
     correct_answer = nbr_to_be_missed
-    return correct_answer
+    return str(correct_answer)
 
 
 def main():
