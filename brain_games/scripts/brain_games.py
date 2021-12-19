@@ -66,6 +66,7 @@ def print_lose_message(user_answer, correct_answer, user_name):
 def main():
     """list of commands after we run brain-games."""
     greet()
+    welcome_user()
 
 
 if __name__ == '__main__':
