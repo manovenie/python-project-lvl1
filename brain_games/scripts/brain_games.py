@@ -44,14 +44,13 @@ def check_user_answer(user_answer, correct_answer):
 
 def game_process(user_name, print_question_return_answer):
     counter_correct_answers = 0
-    if counter_correct_answers < COUNT_WINS_NEEDED:
+    while counter_correct_answers < COUNT_WINS_NEEDED:
         correct_answer = print_question_return_answer()
         user_answer = get_user_answer()
-        if check_user_answer:
+        if check_user_answer(user_answer, correct_answer):
             counter_correct_answers += 1
             print('Correct!')
         else:
-            print_lose_message()
             print_lose_message(user_answer, correct_answer, user_name)
             return
     print(f'Congratulations, {user_name}!')
