@@ -5,6 +5,7 @@ from brain_games.scripts.brain_games import print_game_instruction
 from brain_games.scripts.brain_games import game_process
 from brain_games.scripts.brain_games import generate_int
 
+
 GAME_NAME = 'brain-prime'
 
 
@@ -29,7 +30,7 @@ def print_question_return_answer():
 def main():
     user_name = welcome_user()
     print_game_instruction(GAME_NAME)
-    game_process(user_name)
+    game_process(user_name, print_question_return_answer)
 
 
 if __name__ == '__main__':

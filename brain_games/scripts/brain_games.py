@@ -42,7 +42,7 @@ def check_user_answer(user_answer, correct_answer):
         return False
 
 
-def game_process(user_name):
+def game_process(user_name, print_question_return_answer):
     counter_correct_answers = 0
     if counter_correct_answers < COUNT_WINS_NEEDED:
         correct_answer = print_question_return_answer()
