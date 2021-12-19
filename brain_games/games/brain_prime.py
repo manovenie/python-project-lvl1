@@ -4,10 +4,9 @@ from brain_games.scripts.brain_games import welcome_user
 from brain_games.scripts.brain_games import print_game_instruction
 from brain_games.scripts.brain_games import game_process
 from brain_games.scripts.brain_games import generate_int
-from brain_games.scripts.brain_games import COUNT_WINS_NEEDED
-
 
 GAME_NAME = 'brain-prime'
+
 
 def find_true_answer(nbr):
     counter = 0
@@ -31,6 +30,7 @@ def main():
     user_name = welcome_user()
     print_game_instruction(GAME_NAME)
     game_process(user_name)
+
 
 if __name__ == '__main__':
     main()

@@ -4,8 +4,6 @@ from brain_games.scripts.brain_games import welcome_user
 from brain_games.scripts.brain_games import print_game_instruction
 from brain_games.scripts.brain_games import game_process
 from brain_games.scripts.brain_games import generate_int
-from brain_games.scripts.brain_games import COUNT_WINS_NEEDED
-
 
 GAME_NAME = 'brain-gcd'
 
