@@ -3,6 +3,7 @@
 from brain_games.cli import get_user_answer, get_user_name
 import random
 
+
 MIN_RANDOM_INT = 1
 MAX_RANDOM_INT = 50
 COUNT_WINS_NEEDED = 3

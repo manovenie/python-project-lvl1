@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 from brain_games.game_process import start
-from brain_games.games import brain_calc as game
+from brain_games.games import brain_calc
 
 
 def main():
-    """list of commands after we run brain-games."""
-    start(game)
+    """Run brain-calc game"""
+    start(brain_calc)
 
 
 if __name__ == '__main__':
