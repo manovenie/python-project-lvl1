@@ -7,6 +7,7 @@ import random
 
 
 GAME_NAME = 'brain-progression'
+GAME_INSTRUCTION = 'What number is missing in the progression?'
 PROGRESSION_LEN_MIN = 5
 PROGRESSION_LEN_MAX = 10
 START_MIN = 1
@@ -43,13 +44,3 @@ def print_question_return_answer():
     show_incomplete_progression(random_progression, nbr_to_be_missed)
     correct_answer = nbr_to_be_missed
     return str(correct_answer)
-
-
-def main():
-    user_name = welcome_user()
-    print_game_instruction(GAME_NAME)
-    game_process(user_name, print_question_return_answer)
-
-
-if __name__ == '__main__':
-    main()
