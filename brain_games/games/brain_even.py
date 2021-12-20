@@ -1,14 +1,9 @@
 #!/usr/bin/env python
 
-from brain_games.scripts.brain_games import welcome_user
-from brain_games.scripts.brain_games import print_game_instruction
-from brain_games.scripts.brain_games import game_process
 from brain_games.scripts.brain_games import generate_int
-
 
 GAME_NAME = 'brain-even'
 GAME_INSTRUCTION = 'Answer "yes" if the number is even, otherwise answer "no".'
-
 
 
 def find_true_answer(generated_int):

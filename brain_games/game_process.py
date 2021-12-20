@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from brain_games.cli import get_user_answer, get_user_name
 import random
 
@@ -28,13 +30,16 @@ def check_user_answer(user_answer, correct_answer):
     else:
         return False
 
-def start(game):
+
+def start(game=None):
     greet()
     user_name = welcome_user()
-    print(game.GAME_INSTRUCTION)
-    game_process(user_name, game.print_question_return_answer)
+    if game:
+        print(game.GAME_INSTRUCTION)
+        game_loop(user_name, game.print_question_return_answer)
 
-def game_process(user_name, print_question_return_answer):
+
+def game_loop(user_name, print_question_return_answer):
     counter_correct_answers = 0
     while counter_correct_answers < COUNT_WINS_NEEDED:
         correct_answer = print_question_return_answer()
@@ -45,7 +50,7 @@ def game_process(user_name, print_question_return_answer):
         else:
             print_lose_message(user_answer, correct_answer, user_name)
             return
-    print(f'Congratulations, {user_name}!')
+    print('Congratulations, {}!'.format(user_name))
 
 
 def print_lose_message(user_answer, correct_answer, user_name):

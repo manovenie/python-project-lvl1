@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-from brain_games.scripts.brain_games import welcome_user
-from brain_games.scripts.brain_games import print_game_instruction
-from brain_games.scripts.brain_games import game_process
 from brain_games.scripts.brain_games import generate_int
 import operator
 import random
