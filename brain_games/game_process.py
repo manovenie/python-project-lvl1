@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from brain_games.cli import get_user_answer, get_user_name
 import random
