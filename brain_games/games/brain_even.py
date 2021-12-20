@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from brain_games.scripts.brain_games import generate_int
+from brain_games.game_process import generate_int
 
 GAME_NAME = 'brain-even'
 GAME_INSTRUCTION = 'Answer "yes" if the number is even, otherwise answer "no".'
