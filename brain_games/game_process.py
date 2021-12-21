@@ -1,24 +1,12 @@
 #!/usr/bin/env python3
 
-from brain_games.cli import get_user_answer, get_user_name
+from brain_games.cli import welcome_user, get_user_name
 import random
 
 
 MIN_RANDOM_INT = 1
 MAX_RANDOM_INT = 50
 COUNT_WINS_NEEDED = 3
-
-
-def welcome_user():
-    greet()
-    user_name = get_user_name()
-    print('Hello, {}!'.format(user_name))
-    return user_name
-
-
-def greet():
-    """print welcome message."""
-    print('Welcome to the Brain Games!')
 
 
 def generate_int():
@@ -33,7 +21,6 @@ def check_user_answer(user_answer, correct_answer):
 
 
 def start(game=None):
-    greet()
     user_name = welcome_user()
     if game:
         print(game.GAME_INSTRUCTION)
