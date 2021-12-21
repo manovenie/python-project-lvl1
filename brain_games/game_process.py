@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games.cli import welcome_user, get_user_name
+from brain_games.cli import welcome_user, get_user_answer
 import random
 
 
