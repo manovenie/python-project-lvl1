@@ -20,7 +20,7 @@ def find_true_answer(nbr):
 
 
 def print_question_return_answer():
-    random_nbr = generate_int()
-    print('Question: {}'.format(random_nbr))
-    correct_answer = find_true_answer(random_nbr)
+    random_int = generate_int()
+    print('Question: {}'.format(random_int))
+    correct_answer = find_true_answer(random_int)
     return correct_answer
