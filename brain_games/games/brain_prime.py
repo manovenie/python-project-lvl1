@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from brain_games.game_process import generate_int
-from brain_games.games.brain_even import print_question_return_answer
+
 
 GAME_NAME = 'brain-prime'
 GAME_INSTRUCTION = 'Answer "yes" if given ' \
@@ -17,3 +17,10 @@ def find_true_answer(nbr):
         return 'yes'
     else:
         return 'no'
+
+
+def print_question_return_answer():
+    random_nbr = generate_int()
+    print('Question: {}'.format(random_nbr))
+    correct_answer = find_true_answer(random_nbr)
+    return correct_answer
