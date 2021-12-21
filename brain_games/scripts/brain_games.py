@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+'''Welcome part of the game'''
+
 from brain_games.cli import welcome_user
 
 
