@@ -9,35 +9,24 @@ MAX_RANDOM_INT = 50
 COUNT_WINS_NEEDED = 3
 
 
-def start(game=None):
+def game_loop(game):
     user_name = welcome_user()
     if game:
         print(game.GAME_INSTRUCTION)
-        game_loop(user_name, game.print_question_return_answer)
-
-
-def game_loop(user_name, print_question_return_answer):
-    counter_correct_answers = 0
-    while counter_correct_answers < COUNT_WINS_NEEDED:
-        correct_answer = print_question_return_answer()
-        user_answer = get_user_answer()
-        if check_user_answer(user_answer, correct_answer):
-            counter_correct_answers += 1
-            print('Correct!')
-        else:
-            print("""
-            '{}' is wrong answer ;(. Correct answer was '{}'\n
-            Let's try again, {}!
-            """.format(user_answer, correct_answer, user_name))
-            return
-    print('Congratulations, {}!'.format(user_name))
-
-
-def check_user_answer(user_answer, correct_answer):
-    if user_answer == correct_answer:
-        return True
-    else:
-        return False
+        counter_correct_answers = 0
+        while counter_correct_answers < COUNT_WINS_NEEDED:
+            correct_answer = game.print_question_return_answer()
+            user_answer = get_user_answer()
+            if user_answer == correct_answer:
+                counter_correct_answers += 1
+                print('Correct!')
+            else:
+                print("""
+                '{}' is wrong answer ;(. Correct answer was '{}'\n
+                Let's try again, {}!
+                """.format(user_answer, correct_answer, user_name))
+                return
+        print('Congratulations, {}!'.format(user_name))
 
 
 def generate_int():

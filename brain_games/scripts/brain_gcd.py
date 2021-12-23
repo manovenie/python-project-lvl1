@@ -2,13 +2,13 @@
 
 '''Brain-gcd game'''
 
-from brain_games.game_process import start
+from brain_games.game_process import game_loop
 from brain_games.games import brain_gcd
 
 
 def main():
     """Runs brain-gcd game"""
-    start(brain_gcd)
+    game_loop(brain_gcd)
 
 
 if __name__ == '__main__':
