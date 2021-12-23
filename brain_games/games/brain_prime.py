@@ -8,6 +8,13 @@ GAME_INSTRUCTION = 'Answer "yes" if given ' \
                    'number is prime. Otherwise answer "no".'
 
 
+def print_question_return_answer():
+    random_int = generate_int()
+    print('Question: {}'.format(random_int))
+    correct_answer = find_true_answer(random_int)
+    return correct_answer
+
+
 def find_true_answer(nbr):
     counter = 0
     for iter in range(1, nbr + 1):
@@ -17,10 +24,3 @@ def find_true_answer(nbr):
         return 'yes'
     else:
         return 'no'
-
-
-def print_question_return_answer():
-    random_int = generate_int()
-    print('Question: {}'.format(random_int))
-    correct_answer = find_true_answer(random_int)
-    return correct_answer

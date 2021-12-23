@@ -13,6 +13,15 @@ STEP_MIN = 2
 STEP_MAX = 10
 
 
+def print_question_return_answer():
+    random_progression = generate_progression()
+    nbr_to_be_missed = random.choice(random_progression)
+    print('Question: ', end='')
+    show_incomplete_progression(random_progression, nbr_to_be_missed)
+    correct_answer = nbr_to_be_missed
+    return str(correct_answer)
+
+
 def generate_progression():
     random_length = random.randint(PROGRESSION_LEN_MIN, PROGRESSION_LEN_MAX)
     random_start = random.randint(START_MIN, START_MAX)
@@ -32,12 +41,3 @@ def show_incomplete_progression(progression, hidden_nbr):
         else:
             print(number, end=' ')
     print()
-
-
-def print_question_return_answer():
-    random_progression = generate_progression()
-    nbr_to_be_missed = random.choice(random_progression)
-    print('Question: ', end='')
-    show_incomplete_progression(random_progression, nbr_to_be_missed)
-    correct_answer = nbr_to_be_missed
-    return str(correct_answer)
