@@ -6,11 +6,11 @@ GAME_NAME = 'brain-gcd'
 GAME_INSTRUCTION = 'Find the greatest common divisor of given numbers.'
 
 
-def print_question_return_answer():
+def get_question_and_answer():
     random_int1, random_int2 = generate_int(), generate_int()
-    print('Question: {} {}'.format(random_int1, random_int2))
-    correct_answer = find_true_answer(random_int1, random_int2)
-    return correct_answer
+    question = '{} {}'.format(random_int1, random_int2)
+    answer = find_true_answer(random_int1, random_int2)
+    return question, answer
 
 
 def find_true_answer(int1, int2):

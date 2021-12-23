@@ -13,13 +13,15 @@ STEP_MIN = 2
 STEP_MAX = 10
 
 
-def print_question_return_answer():
+def get_question_and_answer():
     random_progression = generate_progression()
-    nbr_to_be_missed = random.choice(random_progression)
-    print('Question: ', end='')
-    show_incomplete_progression(random_progression, nbr_to_be_missed)
-    correct_answer = nbr_to_be_missed
-    return str(correct_answer)
+    nbr_to_be_hidden = random.choice(random_progression)
+    hidden_index = random_progression.index(nbr_to_be_hidden)
+    random_progression[hidden_index] = '..'
+    random_progression = [str(item) for item in random_progression]
+    answer = str(nbr_to_be_hidden)
+    question = ' '.join(random_progression)
+    return question, answer
 
 
 def generate_progression():
@@ -32,12 +34,3 @@ def generate_progression():
         nbr_to_add += random_step
         progression.append(nbr_to_add)
     return progression
-
-
-def show_incomplete_progression(progression, hidden_nbr):
-    for number in progression:
-        if number == hidden_nbr:
-            print("..", end=' ')
-        else:
-            print(number, end=' ')
-    print()
