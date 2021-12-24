@@ -3,4 +3,5 @@
 dist/
 __pycache__/
 /brain_games/__pychache__/
-/brain_games/__pycache__/
+/brain_games/scripts/__pycache__/
+/brain_games/scripts/brain_games.pyc
