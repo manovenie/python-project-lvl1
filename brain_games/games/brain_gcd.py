@@ -17,10 +17,9 @@ def get_question_and_answer():
 
 
 def find_gcd(a, b):
-    while True:
-        if a == b:
-            return str(a)
-        elif a > b:
-            a = a - b
-        elif b > a:
-            b = b - a
+    while a != b:
+        if a > b:
+            a -= b
+        else:
+            b -= a
+    return str(a)
