@@ -1,23 +1,22 @@
 #!/usr/bin/env python3
 
-import operator
+from operator import add, sub, mul
 import random
 
 GAME_INSTRUCTION = 'What is the result of the expression?'
 MIN_RANDOM_INT = 1
 MAX_RANDOM_INT = 30
-
-operations = {
-    '-': operator.sub,
-    '+': operator.add,
-    '*': operator.mul,
+OPERATIONS = {
+    '-': sub,
+    '+': add,
+    '*': mul,
 }
 
 
 def get_question_and_answer():
-    random_int1 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
-    random_int2 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
-    operation = random.choice(list(operations.keys()))
-    question = '{} {} {}'.format(random_int1, operation, random_int2)
-    answer = str(operations[operation](random_int1, random_int2))
+    int1 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+    int2 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+    symbol, operation = random.choice(list(OPERATIONS.items()))
+    answer = str(operation(int1, int2))
+    question = '{} {} {}'.format(int1, symbol, int2)
     return question, answer
