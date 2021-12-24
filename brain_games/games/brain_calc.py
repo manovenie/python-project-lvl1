@@ -5,7 +5,7 @@ import random
 
 GAME_INSTRUCTION = 'What is the result of the expression?'
 MIN_RANDOM_INT = 1
-MAX_RANDOM_INT = 50
+MAX_RANDOM_INT = 30
 
 operations = {
     '-': operator.sub,
