@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 
-from brain_games.game_process import generate_int
+import random
 
 
 GAME_INSTRUCTION = 'Answer "yes" if given ' \
                    'number is prime. Otherwise answer "no".'
+MIN_RANDOM_INT = 1
+MAX_RANDOM_INT = 50
 
 
 def get_question_and_answer():
-    random_int = generate_int()
+    random_int = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
     question = '{}'.format(random_int)
     answer = find_true_answer(random_int)
     return question, answer

@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 
 from brain_games.cli import welcome_user, get_user_answer
-import random
 
 
-MIN_RANDOM_INT = 1
-MAX_RANDOM_INT = 50
 COUNT_WINS_NEEDED = 3
 
 
@@ -24,7 +21,3 @@ def game_loop(game):
             print("Let's try again, {}!".format(user_name))
             return
     print('Congratulations, {}!'.format(user_name))
-
-
-def generate_int():
-    return random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
