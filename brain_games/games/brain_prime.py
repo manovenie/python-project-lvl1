@@ -3,7 +3,6 @@
 from brain_games.game_process import generate_int
 
 
-GAME_NAME = 'brain-prime'
 GAME_INSTRUCTION = 'Answer "yes" if given ' \
                    'number is prime. Otherwise answer "no".'
 

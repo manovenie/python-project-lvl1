@@ -4,7 +4,6 @@ from brain_games.game_process import generate_int
 import operator
 import random
 
-GAME_NAME = 'brain-calc'
 GAME_INSTRUCTION = 'What is the result of the expression?'
 
 operations = {

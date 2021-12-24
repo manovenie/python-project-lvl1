@@ -2,7 +2,6 @@
 
 from brain_games.game_process import generate_int
 
-GAME_NAME = 'brain-even'
 GAME_INSTRUCTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 

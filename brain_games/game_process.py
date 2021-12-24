@@ -12,7 +12,7 @@ COUNT_WINS_NEEDED = 3
 def game_loop(game):
     user_name = welcome_user()
     print(game.GAME_INSTRUCTION)
-    for counter in range(COUNT_WINS_NEEDED):
+    for _ in range(COUNT_WINS_NEEDED):
         question, answer = game.get_question_and_answer()
         print('Question: {}'.format(question))
         user_answer = get_user_answer()

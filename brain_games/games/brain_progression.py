@@ -3,7 +3,6 @@
 import random
 
 
-GAME_NAME = 'brain-progression'
 GAME_INSTRUCTION = 'What number is missing in the progression?'
 PROGRESSION_LEN_MIN = 5
 PROGRESSION_LEN_MAX = 10

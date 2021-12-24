@@ -2,7 +2,6 @@
 
 from brain_games.game_process import generate_int
 
-GAME_NAME = 'brain-gcd'
 GAME_INSTRUCTION = 'Find the greatest common divisor of given numbers.'
 
 
