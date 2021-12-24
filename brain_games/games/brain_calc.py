@@ -6,11 +6,7 @@ import random
 GAME_INSTRUCTION = 'What is the result of the expression?'
 MIN_RANDOM_INT = 1
 MAX_RANDOM_INT = 30
-OPERATIONS = {
-    '-': sub,
-    '+': add,
-    '*': mul,
-}
+OPERATIONS = {'-': sub, '+': add, '*': mul}
 
 
 def get_question_and_answer():
