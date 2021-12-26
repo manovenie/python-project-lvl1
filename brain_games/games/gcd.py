@@ -9,14 +9,14 @@ MAX_RANDOM_INT = 50
 
 
 def get_question_and_answer():
-    random_int1 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
-    random_int2 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
-    question = '{} {}'.format(random_int1, random_int2)
-    answer = find_gcd(random_int1, random_int2)
+    int1 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+    int2 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+    question = '{} {}'.format(int1, int2)
+    answer = get_gcd(int1, int2)
     return question, answer
 
 
-def find_gcd(a, b):
+def get_gcd(a, b):
     while a != b:
         if a > b:
             a -= b

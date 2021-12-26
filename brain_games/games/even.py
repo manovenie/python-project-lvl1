@@ -8,7 +8,7 @@ MAX_RANDOM_INT = 50
 
 
 def get_question_and_answer():
-    random_int = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
-    question = '{}'.format(random_int)
-    answer = 'no' if random_int % 2 else 'yes'
+    num = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+    question = '{}'.format(num)
+    answer = 'no' if num % 2 else 'yes'
     return question, answer
