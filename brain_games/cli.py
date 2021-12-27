@@ -9,5 +9,4 @@ def get_user_name():
 
 
 def get_user_answer():
-    """Prompt user for answer."""
     return prompt.string('Your answer: ')
