@@ -16,11 +16,10 @@ def get_question_and_answer():
     return question, answer
 
 
-def is_prime(num):
-    if num > 1:
-        for counter in range(2, (num // 2) + 1):
-            if num % counter == 0:
-                return 'no'
-        else:
-            return 'yes'
-    return 'no'
+def is_prime(number):
+    if (number < 2):
+        return 'no'
+    for counter in range(2, (number // 2) + 1):
+        if number % counter == 0:
+            return 'no'
+    return 'yes'
