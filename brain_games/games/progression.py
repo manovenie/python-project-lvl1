@@ -17,8 +17,8 @@ def get_question_and_answer():
     start = random.randint(START_MIN, START_MAX)
     step = random.randint(STEP_MIN, STEP_MAX)
     progression = [start + counter * step for counter in range(length)]
-    hidden_nbr_index = random.randint(0, length - 1)
-    answer = str(progression[hidden_nbr_index])
-    progression[hidden_nbr_index] = '..'
+    hidden_num_index = random.randint(0, length - 1)
+    answer = str(progression[hidden_num_index])
+    progression[hidden_num_index] = '..'
     question = ' '.join(str(item) for item in progression)
     return question, answer

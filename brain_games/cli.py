@@ -3,10 +3,8 @@
 import prompt
 
 
-def welcome_user():
-    print('Welcome to the Brain Games!')
+def get_user_name():
     user_name = prompt.string('May I have your name? ')
-    print('Hello, {}!'.format(user_name))
     return user_name
 
 

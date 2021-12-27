@@ -10,9 +10,9 @@ OPERATIONS = [['-', sub], ['+', add], ['*', mul]]
 
 
 def get_question_and_answer():
-    int1 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
-    int2 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+    number1 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+    number2 = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
     symbol, operation = random.choice(OPERATIONS)
-    answer = str(operation(int1, int2))
-    question = '{} {} {}'.format(int1, symbol, int2)
+    answer = str(operation(number1, number2))
+    question = '{} {} {}'.format(number1, symbol, number2)
     return question, answer

@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 
-from brain_games.cli import welcome_user, get_user_answer
+from brain_games.cli import get_user_name, get_user_answer
 
 
 COUNT_WINS_NEEDED = 3
 
 
 def game_loop(game):
-    user_name = welcome_user()
+    print('Welcome to the Brain Games!')
+    user_name = get_user_name()
+    print('Hello, {}!'.format(user_name))
     print(game.GAME_INSTRUCTION)
     for _ in range(COUNT_WINS_NEEDED):
         question, answer = game.get_question_and_answer()

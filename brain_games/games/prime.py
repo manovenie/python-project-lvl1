@@ -10,9 +10,9 @@ MAX_RANDOM_INT = 50
 
 
 def get_question_and_answer():
-    num = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
-    question = '{}'.format(num)
-    answer = is_prime(num)
+    number = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+    question = '{}'.format(number)
+    answer = is_prime(number)
     return question, answer
 
 
