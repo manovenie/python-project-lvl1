@@ -2,12 +2,12 @@
 
 '''Welcome part of the game'''
 
-from brain_games.cli import welcome_user
+from brain_games.game_process import game_loop
 
 
 def main():
     """No game: just prints welcome messages"""
-    welcome_user()
+    game_loop()
 
 
 if __name__ == '__main__':
