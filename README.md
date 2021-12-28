@@ -6,11 +6,11 @@
 The project is from "Python developer" course on [Hexlet.io](https://ru.hexlet.io/programs/python)
 
 The project has quite simple logic. The user needs to guess the right answer to a given question in 5 quick math games:
-- calculator: brain-calc
-- greatest common divisor: brain-gcd
-- arithmetic progression: brain-progression
-- prime number: brain-prime
-- check if even: brain-even
+- Calculator: ***brain-calc***
+- Greatest common divisor: ***brain-gcd***
+- Arithmetic progression: ***brain-progression***
+- Prime number: ***brain-prime***
+- Check if even: ***brain-even***
 
 ## Installation
 -
