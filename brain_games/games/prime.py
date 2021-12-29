@@ -5,12 +5,12 @@ import random
 
 GAME_INSTRUCTION = 'Answer "yes" if given ' \
                    'number is prime. Otherwise answer "no".'
-MIN_RANDOM_INT = 1
-MAX_RANDOM_INT = 50
+MIN_NUM = 1
+MAX_NUM = 50
 
 
-def get_question_and_answer():
-    number = random.randint(MIN_RANDOM_INT, MAX_RANDOM_INT)
+def generate_question_and_answer():
+    number = random.randint(MIN_NUM, MAX_NUM)
     question = '{}'.format(number)
     answer = is_prime(number)
     return question, answer

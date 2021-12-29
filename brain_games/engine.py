@@ -3,7 +3,7 @@
 from brain_games.cli import get_user_name, get_user_answer
 
 
-COUNT_WINS_NEEDED = 3
+CORRECT_ANSWERS_NEEDED = 3
 
 
 def run_game(game):
@@ -11,8 +11,8 @@ def run_game(game):
     user_name = get_user_name()
     print('Hello, {}!'.format(user_name))
     print(game.GAME_INSTRUCTION)
-    for _ in range(COUNT_WINS_NEEDED):
-        question, answer = game.get_question_and_answer()
+    for _ in range(CORRECT_ANSWERS_NEEDED):
+        question, answer = game.generate_question_and_answer()
         print('Question: {}'.format(question))
         user_answer = get_user_answer()
         if user_answer == answer:

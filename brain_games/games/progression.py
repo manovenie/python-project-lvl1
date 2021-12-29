@@ -12,7 +12,7 @@ STEP_MIN = 2
 STEP_MAX = 10
 
 
-def get_question_and_answer():
+def generate_question_and_answer():
     length = random.randint(PROGRESSION_LEN_MIN, PROGRESSION_LEN_MAX)
     start = random.randint(START_MIN, START_MAX)
     step = random.randint(STEP_MIN, STEP_MAX)
