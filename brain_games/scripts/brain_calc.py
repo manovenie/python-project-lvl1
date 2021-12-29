@@ -2,13 +2,13 @@
 
 '''Brain-calc game'''
 
-from brain_games.game_process import game_loop
+from brain_games.engine import run_game
 from brain_games.games import calc
 
 
 def main():
     """Run brain-calc game"""
-    game_loop(calc)
+    run_game(calc)
 
 
 if __name__ == '__main__':

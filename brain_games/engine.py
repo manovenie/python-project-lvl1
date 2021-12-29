@@ -6,7 +6,7 @@ from brain_games.cli import get_user_name, get_user_answer
 COUNT_WINS_NEEDED = 3
 
 
-def game_loop(game):
+def run_game(game):
     print('Welcome to the Brain Games!')
     user_name = get_user_name()
     print('Hello, {}!'.format(user_name))

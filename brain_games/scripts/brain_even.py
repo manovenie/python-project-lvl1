@@ -2,13 +2,13 @@
 
 '''Brain-even game'''
 
-from brain_games.game_process import game_loop
+from brain_games.engine import run_game
 from brain_games.games import even
 
 
 def main():
     """Runs brain-even game"""
-    game_loop(even)
+    run_game(even)
 
 
 if __name__ == '__main__':
