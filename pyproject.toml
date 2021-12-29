@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "dutlov_hexlet-python-1lvl"
+name = "hexlet-code"
 version = "0.1.0"
 description = "The first of four educating projects of the 'Profession: Python Developer' course on Hexlet.io"
 authors = ["Ilya Dutlov <id@dutlov.ru>"]
