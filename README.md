@@ -1,4 +1,4 @@
-# Brain Games — the first Python project on Hexlet
+# Brain Games
 [![Maintainability](https://api.codeclimate.com/v1/badges/98238cebc25c318600c9/maintainability)](https://codeclimate.com/github/dutlov/python-project-lvl1/maintainability)
 [![Linter Status](https://github.com/dutlov/python-project-lvl1/workflows/linter-check/badge.svg)](https://github.com/dutlov/python-project-lvl1/actions)
 
